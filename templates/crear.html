@@ -1,0 +1,31 @@
+{% extends './base.html' %}
+{% block titulo %}
+    <title>Crear</title>
+{% endblock %}
+{% block contenido %}
+    <div class="container min-vh-100 d-flex justify-content-center align-items-center" id="divForm">
+        <form action="/creado" method="post"  enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Código Estudiantil</label>
+                <input type="text" class="form-control" id="codigo" name="codigo">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Correo</label>
+                <input type="text" class="form-control" id="correo" name="correo">
+              </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Edad</label>
+                <input type="text" class="form-control" id="edad" name="edad">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Foto</label>
+                <input class="form-control" type="file" id="formFile" name="image" required accept="image/*">
+            </div>
+            <button type="submit" value="Upload" class="btn btn-primary">Guardar</button>
+        </form>
+    </div>
+{% endblock %}

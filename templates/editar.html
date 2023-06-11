@@ -1,0 +1,31 @@
+{% extends './base.html' %}
+{% block titulo %}
+    <title>Editar</title>
+{% endblock %}
+{% block contenido %}
+    <div class="container min-vh-100 d-flex justify-content-center align-items-center" id="divForm">
+        <form action="/editado/{{datos.id}}/{{datos.file_name}}" method="post"  enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Código</label>
+                <input type="text" class="form-control" id="codigo" name="codigo" value="{{datos.codigo}}">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" value="{{datos.nombre}}">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Correo</label>
+                <input type="text" class="form-control" id="correo" name="correo" value="{{datos.correo}}">
+              </div>
+            <div class="mb-3">  
+                <label for="exampleInputEmail1" class="form-label">Edad</label>
+                <input type="text" class="form-control" id="edad" name="edad" value="{{datos.edad}}">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Foto</label>
+                <input class="form-control" type="file" id="formFile" name="image" accept="image/*">
+            </div>
+            <button type="submit" value="Upload" class="btn btn-primary">Guardar</button>
+        </form>
+    </div>
+{% endblock %}
